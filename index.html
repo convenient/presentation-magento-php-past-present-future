@@ -56,6 +56,70 @@
         </section>
         <section class="slide">
             <div>
+                <h2>What's "new" in 5.5</h2>
+                <ul>
+                    <li>
+                        Housekeeping!
+                        <ul>
+                            <li>E_ALL finally includes E_STRICT</li>
+                            <li>Now requires a timezone defined in php.ini</li>
+                            <li>Removed register super globals</li>
+                            <li>Password hash and verify functions!</li>
+                        </ul>
+                    </li>
+                    <li>Alternative PHP Cache (APC) is no longer available
+                    <ul>
+                        <li>Zend OPCache included</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Traits</h2>
+                <ul>
+                    <li>Share common functionality between classes that do no change</li>
+                    <li>Varien_Object would be a prime example</li>
+                    <li>Logged setLogger getLOgger</li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Generators & Coroutines</h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Speed!</h2>
+                <ul>
+                    <li>Biggest speedup was in object instantiation</li>
+                    <li>A big boost</li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Hip Hop</h2>
+                <ul>
+                    <li>Hip Hop PHP compiled to C++</li>
+                    <li>HHVM is something you install in place of PHP</li>
+                    <li>Compile PHP to C++, deploy the binary, separate dev env, hassle!</li>
+                    <li>HHVM doesnt compile the php, its just a VM that replaced "php" as the thing you install</li>
+                    <li>3 of the big 10 php websites use HHVM</li>
+                    <li>Mixed results, extensions havent been ported over, high pass rate.</li>
+                    <li>http://hhvm.com/blog/7205/wikipedia-on-hhvm</li>
+                    <li>For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more</li>
+                    <li>hhvm is "rock solid" but extensions sometimes have some bugs</li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
                 <h2>PHP and Magento</h2>
                 <ul>
                     <li>All versions of Magento natively supports PHP 5.3</li>
@@ -73,51 +137,7 @@
             <div>
                 <h2>PHP and Magento - Performance</h2>
                 <img src="pictures/mage-simple-product.png"/>
-                <img style="margin-left: 5px;" src="pictures/mage-checkout.png"/>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <h2>Plain Text on Your Slides</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco
-                    laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in
-                    reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <h2>All Kind of Lists</h2>
-                <ol>
-                    <li>Simple lists are marked with bullets</li>
-                    <li>Ordered lists begin with a number</li>
-                    <li>You can even nest lists one inside another
-                        <ul>
-                            <li>Or mix their types</li>
-                            <li>But do not go too far</li>
-                            <li>Otherwise audience will be bored</li>
-                        </ul>
-                    </li>
-                    <li>Look, seven rows exactly!</li>
-                </ol>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <h2>Serious Citations</h2>
-                <figure>
-                    <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia.</p>
-                    </blockquote>
-                    <figcaption>Marcus Tullius Cicero</figcaption>
-                </figure>
+                <img src="pictures/mage-checkout.png"/>
             </div>
         </section>
         <section class="slide">
@@ -139,72 +159,6 @@
                         <mark>&lt;/head&gt;</mark>
                     </code>
                 </pre>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <h2>Even Tables</h2>
-                <table>
-                    <tr>
-                        <th scope="col">Locavore</th>
-                        <th>Umami</th>
-                        <th>Helvetica</th>
-                        <th>Vegan</th>
-                    </tr>
-                    <tr>
-                        <th scope="row">Fingerstache</th>
-                        <td>Kale</td>
-                        <td>Chips</td>
-                        <td>Keytar</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Sriracha</th>
-                        <td>Gluten-free</td>
-                        <td>Ennui</td>
-                        <td>Keffiyeh</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Thundercats</th>
-                        <td>Jean</td>
-                        <td>Shorts</td>
-                        <td>Biodiesel</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Terry</th>
-                        <td>Richardson</td>
-                        <td>Swag</td>
-                        <td>Blog</td>
-                    </tr>
-                </table>
-                <p>It’s good to have information organized.</p>
-            </div>
-        </section>
-        <section class="slide cover" id="Picture">
-            <div>
-                <h2>Pictures</h2>
-                <img src="pictures/picture.jpg" alt="">
-                <style>
-                    #Picture h2 {
-                        color: #FFF;
-                    }
-                </style>
-            </div>
-        </section>
-        <section class="slide shout">
-            <div>
-                <h2>You can even shout this way</h2>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <h2>Inner Navigation</h2>
-                <ol>
-                    <li>Lets you reveal list items one by one</li>
-                    <li class="next">To keep some key points</li>
-                    <li class="next">In secret from audience</li>
-                    <li class="next">But it will work only once</li>
-                    <li class="next">Nobody wants to see the same joke twice</li>
-                </ol>
             </div>
         </section>
         <section class="slide">
