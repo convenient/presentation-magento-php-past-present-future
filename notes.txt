@@ -1,0 +1,32 @@
+-What's new in PHP
+=====================================
+-We currently use 5.3 for pretty much all of our clients
+-PHP is old, but 82% of sites still run it
+-42.8% are still using 5.3, we fall into this bracket
+-8.2% are using 5.5, we want to be here!
+-http://w3techs.com/technologies/details/pl-php/5/all
+-Does some housekeeping
+--E_ALL finally includes E_STRICT
+--No longer guesses timezone
+--No longer magically gets superglobal
+-Finally does its bit to increase security with easy password hashing and salting, no more md5 !
+-Traits - Building blocks for a class
+--Share common functionality beween classes that do no change
+--All objects extend varien_object, that would be a prime candidate for using a trait as they dont reaaaaaaaaaly extend and arent logically grouped together
+--Used for logger.
+-Generators
+--CoRoutines
+-APC (Alternative PHP cache) is not available, whaaaaaaaaaaa OPCache is included in 5.5. Be chill. (Although it is disabled by default, it's just an ini setting)
+-https://info.magento.com/rs/magentocommerce/images/1.14.1-performance-test-results.pdf
+=====================================
+-hhvm at etsy
+=====================================
+-http://www.infoq.com/news/2014/03/etsy-deploy-50-times-a-day
+-Hip Hop PHP
+-Compile PHP to C++, deploy the binary, separate dev env, hassle!
+-HHVM doesnt compile the php, its just a VM that replaced "php" as the thing you install
+-3 of the big 10 php websites use HHVM
+-Mixed results, extensions havent been ported over, high pass rate.
+-http://hhvm.com/blog/7205/wikipedia-on-hhvm
+-For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more.
+-hhvm is "rock solid" but extensions sometimes have some bugs.
