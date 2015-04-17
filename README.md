@@ -1,3 +1,3 @@
 # PHP - Past, Present and Future
 
-[View Presentation](www.lukerodgers.co.uk/presentation-php-past-present-future)
+[View Presentation](http://www.lukerodgers.co.uk/presentation-php-past-present-future)
