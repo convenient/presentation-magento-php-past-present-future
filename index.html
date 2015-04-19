@@ -49,19 +49,14 @@
         <section class="slide">
             <div>
                 <h2>PHP Is <s>Old and Cranky</s> Maturing</h2>
-                <ul>
-                    <li>
-                        82% of websites operate on PHP
-                        <ul>
-                            <li>Not going anywhere!</li>
-                        </ul>
-                    </li>
-                    <li>5.3 - 30 June 2009 - 35%</li>
-                    <li>5.4 - 1 March 2012 - 24%</li>
-                    <li>5.5 - 20 June 2013 - 6.7%</li>
-                    <li>5.6 - 28 August 2014 - </li>
-                    <li>7.0 - November 2015?</li>
-                </ul>
+                <table>
+                    <tr><th>Version</th><th>Release Date</th><th>Websites Marketshare</th></tr>
+                    <tr><td>5.3</td><td>30 June 2009</td><td>35%</td></tr>
+                    <tr><td>5.4</td><td>1 March 2012</td><td>24%</td></tr>
+                    <tr><td>5.5</td><td>20 June 2013</td><td>6.7%</td></tr>
+                    <tr><td>5.6</td><td>28 August 2014</td><td>??</td></tr>
+                    <tr><td>7.0</td><td>November 2015 (?)</td><td>??</td></tr>
+                </table>
                 <p class="note">http://w3techs.com/technologies/details/pl-php/5/all</p>
             </div>
         </section>
@@ -72,7 +67,7 @@
                     <li>
                         Housekeeping!
                         <ul>
-                            <li>E_ALL finally includes E_STRICT</li>
+                            <li><code>E_ALL</code> finally includes <code>E_STRICT</code></li>
                             <li>Removed register globals</li>
                             <li>Password hash and verify functions!
                                 <ul>
@@ -155,22 +150,6 @@
         </section>
         <section class="slide">
             <div>
-                <h2>Hip Hop</h2>
-                <ul>
-                    <li>Hip Hop PHP compiled to C++</li>
-                    <li>HHVM is something you install in place of PHP</li>
-                    <li>Compile PHP to C++, deploy the binary, separate dev env, hassle!</li>
-                    <li>HHVM doesnt compile the php, its just a VM that replaced "php" as the thing you install</li>
-                    <li>3 of the big 10 php websites use HHVM</li>
-                    <li>Mixed results, extensions havent been ported over, high pass rate.</li>
-                    <li>http://hhvm.com/blog/7205/wikipedia-on-hhvm</li>
-                    <li>For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more</li>
-                    <li>hhvm is "rock solid" but extensions sometimes have some bugs</li>
-                </ul>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
                 <h2>PHP and Magento</h2>
                 <ul>
                     <li>All versions of Magento natively supports PHP 5.3</li>
@@ -189,6 +168,22 @@
                 <h2>PHP and Magento - Performance</h2>
                 <img src="pictures/mage-simple-product.png"/>
                 <img src="pictures/mage-checkout.png"/>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Hip Hop</h2>
+                <ul>
+                    <li>Hip Hop PHP compiled to C++</li>
+                    <li>HHVM is something you install in place of PHP</li>
+                    <li>Compile PHP to C++, deploy the binary, separate dev env, hassle!</li>
+                    <li>HHVM doesnt compile the php, its just a VM that replaced "php" as the thing you install</li>
+                    <li>3 of the big 10 php websites use HHVM</li>
+                    <li>Mixed results, extensions havent been ported over, high pass rate.</li>
+                    <li>http://hhvm.com/blog/7205/wikipedia-on-hhvm</li>
+                    <li>For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more</li>
+                    <li>hhvm is "rock solid" but extensions sometimes have some bugs</li>
+                </ul>
             </div>
         </section>
         <section class="slide">
