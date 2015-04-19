@@ -61,33 +61,75 @@
         </section>
         <section class="slide">
             <div>
-                <h2>What's "new" in 5.5</h2>
+                <h2>What's "new" since 5.3</h2>
                 <ul>
                     <li>
                         Housekeeping!
                         <ul>
                             <li>E_ALL finally includes E_STRICT</li>
-                            <li>Now requires a timezone defined in php.ini</li>
-                            <li>Removed register super globals</li>
-                            <li>Password hash and verify functions!</li>
+                            <li>Removed register globals</li>
+                            <li>Password hash and verify functions!
+                                <ul>
+                                    <li><code>password_hash</code></li>
+                                    <li><code>password_verify</code></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>Alternative PHP Cache (APC) is no longer available
-                    <ul>
-                        <li>Zend OPCache included</li>
-                    </ul>
+                        <ul>
+                            <li>Zend OPCache included</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="slide">
             <div>
-                <h2>Traits</h2>
+                <h2>Traits (5.4)</h2>
                 <ul>
-                    <li>Share common functionality between classes that do no change</li>
-                    <li>Varien_Object would be a prime example</li>
-                    <li>Logged setLogger getLOgger</li>
+                    <li><i>A Trait is similar to a class, but only intended to group functionality in a fine-grained and consistent way</i></li>
+                    <li>Build on one another</li>
+                    <li>Be used together</li>
+                    <li>Inherited by child classes</li>
+                    <li>Share common functionality between classes
+                        <ul>
+                            <li><code>Varien_Object</code> could be <code>Varien_Trait</code></li>
+                        </ul>
+                    </li>
                 </ul>
+                <p class="note">http://php.net/manual/en/language.oop5.traits.php</p>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Traits (5.4)</h2>
+                <pre>
+                    <code>&lt;?php</code>
+                    <code>trait Varien_Trait {</code>
+                    <code>    public function setData($key, $value = null) {</code>
+                    <code>        $this-&gt;data[$key] = $value;</code>
+                    <code>        return $this;</code>
+                    <code>    }</code>
+                    <code>    public function getData($key) {</code>
+                    <code>        return $this-&gt;data[$key];</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </pre>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>Traits (5.4)</h2>
+                <pre>
+                    <code>&lt;?php</code>
+                    <code>class SomeObject {</code>
+                    <code>    use Varien_Trait;</code>
+                    <code>    public function someFunction() {</code>
+                    <code>        $this->setData('Silly Example');</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </pre>
             </div>
         </section>
         <section class="slide">
@@ -179,6 +221,7 @@
                     <li>http://w3techs.com/technologies/details/pl-php/5/all</li>
                     <li>https://speakerdeck.com/jazzdan/hhvm-at-etsy</li>
                     <li>https://info.magento.com/rs/magentocommerce/images/1.14.1-performance-test-results.pdf</li>
+                    <li>http://php.net/manual/en/language.oop5.traits.php</li>
                     <li>PHP UK Conference Youtube - http://bit.ly/1E9P49N</li>
                 </ol>
             </div>
