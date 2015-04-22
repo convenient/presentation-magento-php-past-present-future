@@ -33,3 +33,11 @@
 -http://hhvm.com/blog/7205/wikipedia-on-hhvm
 -For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more.
 -hhvm is "rock solid" but extensions sometimes have some bugs.
+
+
+-https://www.pinterest.com/pin/574209021214048085/
+-Hip hop image
+
+
+https://m.facebook.com/notes/facebook-engineering/speeding-up-php-based-development-with-hhvm/10151170460698920/
+-HHVM logo
