@@ -41,3 +41,6 @@
 
 https://m.facebook.com/notes/facebook-engineering/speeding-up-php-based-development-with-hhvm/10151170460698920/
 -HHVM logo
+
+-Wordpress php perfromance
+http://talks.php.net/fluent15#/wpbench

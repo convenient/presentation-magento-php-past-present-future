@@ -272,7 +272,7 @@
                     <li>Development process is very different
                         <ul>
                             <li>Compile each change</li>
-                            <li>HPHPi - Custom interpreter for development</li>
+                            <li><code>HPHPi</code> - Custom interpreter for development</li>
                         </ul>
                     </li>
                     <li class="next">Discontinued in 2013 in favour of ...</li>
@@ -294,11 +294,49 @@
         </section>
         <section class="slide">
             <div>
+                <h2>Hip Hop Virtual Machine (HHVM)</h2>
+                <ul>
+                    <li>JIT Virtual Machine for <code>PHP</code> and <code>Hack</code> languages
+                        <ul>
+                            <li><code>Hack</code> is a dialect of PHP created by Facebook</li>
+                        </ul>
+                    </li>
+                    <li>Simplifies development as <code>HPHPi</code> is no longer required</li>
+                    <li>
+                        According to Etsy, it is <b>difficult!</b>
+                        <ul>
+                            <li>Upgrade <code>gcc</code>, <code>libmecached</code>, <code>libmcrypt</code> and many more!</li>
+                            <li><i>HVVM is rock solid, Extensions sometimes have bugs (<code>memcached</code>)</i></li>
+                        </ul>
+                    </li>
+                    <li>Used by Facebook, Wikipedia, Baidu, Etsy(ish)</li>
+                </ul>
+            </div>
+        </section>
+        <section class="slide" id="HvvmPerformance">
+            <div>
+                <h2>HHVM Performance</h2>
+                <img src="pictures/rasmus-wp-bench.png"/>
+                <style scoped="scoped">
+                    #HvvmPerformance img {
+                        width: 80%;
+                        margin-left: 10%;
+                        margin-right: 10%;
+                    }
+                </style>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
+                <h2>HHVM and Magento</h2>
+                <img src="pictures/arent_ready_yet_bttf.gif" style="width: 100%"/>
+            </div>
+        </section>
+        <section class="slide">
+            <div>
                 <h2>Hip Hop</h2>
                 <ul>
-                    <li>Hip Hop PHP compiled to C++</li>
                     <li>HHVM is something you install in place of PHP</li>
-                    <li>Compile PHP to C++, deploy the binary, separate dev env, hassle!</li>
                     <li>HHVM doesnt compile the php, its just a VM that replaced "php" as the thing you install</li>
                     <li>3 of the big 10 php websites use HHVM</li>
                     <li>Mixed results, extensions havent been ported over, high pass rate.</li>
@@ -306,11 +344,6 @@
                     <li>For etsy to get it running on just their API server they had to upgrade, gcc, libmecached, libmcrypt, more, and more</li>
                     <li>hhvm is "rock solid" but extensions sometimes have some bugs</li>
                 </ul>
-            </div>
-        </section>
-        <section class="slide">
-            <div>
-                <img src="pictures/arent_ready_yet_bttf.gif" style="width: 100%"/>
             </div>
         </section>
         <section class="slide">
