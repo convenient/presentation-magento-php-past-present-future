@@ -11,6 +11,7 @@
 --No longer magically gets superglobal
 -Finally does its bit to increase security with easy password hashing and salting, no more md5 !
 -Traits - Building blocks for a class
+--http://stackoverflow.com/a/28896448/4354325
 --Share common functionality beween classes that do no change
 --All objects extend varien_object, that would be a prime candidate for using a trait as they dont reaaaaaaaaaly extend and arent logically grouped together
 --Used for logger.
