@@ -18,6 +18,8 @@
 --CoRoutines
 -APC (Alternative PHP cache) is not available, whaaaaaaaaaaa OPCache is included in 5.5. Be chill. (Although it is disabled by default, it's just an ini setting)
 -https://info.magento.com/rs/magentocommerce/images/1.14.1-performance-test-results.pdf
+-http://cvuorinen.net/2013/08/whats-new-in-php-5-5/
+--Fizzbuzz example
 =====================================
 -hhvm at etsy
 =====================================

@@ -77,13 +77,13 @@
                         Housekeeping!
                         <ul>
                             <li><code>E_ALL</code> finally includes <code>E_STRICT</code></li>
-                            <li>Removed register globals</li>
                             <li>Password hash and verify functions!
                                 <ul>
                                     <li><code>password_hash</code></li>
                                     <li><code>password_verify</code></li>
                                 </ul>
                             </li>
+                            <li><code>try</code>, <code>catch</code>, <code>finally</code>!</li>
                         </ul>
                     </li>
                     <li>Alternative PHP Cache (APC) is no longer available
@@ -144,23 +144,66 @@
         </section>
         <section class="slide">
             <div>
-                <h2>Generators</h2>
+                <h2>Generators (5.5)</h2>
                 <ul>
-                    <li>Easy iterators that done have to implement iterable interface</li>
-                    <li>A lot less memory is required!</li>
+                    <li>Simple forward only iterators</li>
+                    <li>Don't have to implement <code>Iterator</code> interface</li>
+                    <li>A lot less memory is required!
+                        <ul>
+                            <li>Doesn't require the array to be built in memory</li>
+                            <li>Simply <code>yield</code> the value</li>
+                        </ul>
+                    </li>
                 </ul>
+                <p class="note">http://php.net/manual/en/language.generators.overview.php</p>
+            </div>
+        </section>
+        <!--
+        Future use for dataProviders in phpunit
+        -->
+        <section class="slide">
+            <div>
+                <h2>Generators (5.5)</h2>
+                <pre>
+                    <code>class FizzBuzz {</code>
+                    <code>    public function getValues($num) {</code>
+                    <code>        for ($i = 1; $i <= $num; $i++) {</code>
+                    <code>            $value = ($i % 3) ? '' : 'Fizz';</code>
+                    <code>            $value .= ($i % 5) ? '' : 'Buzz';</code>
+                    <code>            yield $value ?: $i;</code>
+                    <code>        }</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </pre>
             </div>
         </section>
         <section class="slide">
             <div>
-                <h2>Coroutines</h2>
+                <h2>Generators (5.5)</h2>
+                <pre>
+                    <code>&lt;?php</code>
+                    <code>$fb = new FizzBuzz();</code>
+                    <code>foreach ($fb->getValues(1000000) as $val) {</code>
+                    <code>    echo $val. PHP_EOL;</code>
+                    <code>}</code>
+                </pre>
             </div>
+            <!--
+                Without generators we'd have to actually build this massive amount of data in memory.
+            -->
         </section>
-        <section class="slide">
+        <section class="slide" id="PhpPerformance">
             <div>
                 <h2>Speed!</h2>
-                <img src="pictures/php-performance-may-2014.png" style="height: 70%;"/>
+                <img src="pictures/php-performance-may-2014.png" id="lorna-performance" style=""/>
                 <p class="note">http://www.lornajane.net/posts/2014/php-5-6-benchmarks</p>
+                <style scoped="scoped">
+                    #PhpPerformance img {
+                        width: 60%;
+                        margin-left: 20%;
+                        margin-right: 20%;
+                    }
+                </style>
             </div>
         </section>
         <section class="slide">
